@@ -1,11 +1,12 @@
+// scraper.js
+
 import puppeteer from 'puppeteer';
 
 export class WebScraper {
   async scrapeWebsites(urls) {
     console.log('Launching browser...');
-    const browser = await puppeteer.launch({ 
-      headless: 'new',
-      channel: 'chrome',
+    const browser = await puppeteer.launch({
+      headless: true,
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
