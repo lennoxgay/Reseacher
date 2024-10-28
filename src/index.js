@@ -1,3 +1,5 @@
+// index.js
+
 import puppeteer from 'puppeteer';
 import PDFDocument from 'pdfkit';
 import fs from 'fs';
@@ -18,7 +20,6 @@ const websites = [
 
 async function main() {
   try {
-    // Validate API key
     if (!process.env.OPENAI_API_KEY) {
       throw new Error('OpenAI API key is not set in .env file');
     }
